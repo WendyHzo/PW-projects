@@ -1,15 +1,14 @@
 import React from 'react';
-import Header from '../../components/header';
-import Products from '../../components/products';
+import Header from '../componentes/Header';
+import Products from '../componentes/Products';
 
 const Store = () => {
     return (
-        <>
-            <Header />
+        <>  <Header />
             <div className="container">
                 <div className="row text-center" style={{ paddingTop: '4rem' }} >
-                    <h1 style={{fontSize: 45}}>STORE</h1>
-                    <p style={{fontSize: 20}} >This is the product catalog</p>
+                 
+                    <p style={{fontSize: 20}} >Catalogo de productos </p>
                 </div>
                 <Products />
             </div>

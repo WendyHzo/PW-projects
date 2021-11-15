@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import Header from '../../components/header';
-import CardCost from '../../components/cardCost'
-import ProductCart from '../../components/productsCart'
-import { GlobalContext } from "../../context/globalContext";
-import emptyCart from '../../assets/empty-cart.png'
+import Header from '../componentes/Header';
+import CardCost from '../componentes/CardCost';
+import ProductCart from '../componentes/ProductCart'
+import { GlobalContext } from "../context/GlobalContext";
 import { Link } from 'react-router-dom'
+
+
 
 const Cart = () => {
 
@@ -27,11 +28,11 @@ const Cart = () => {
                     : 
                         <div className="w-100" >
                             <Link to="/products" >
-                                <div style={{ width: 150, margin: '50px auto 10px auto'}}>
-                                    <img style={{}} src={emptyCart} alt="cart_empty" width="150" height="150" />
+                                <div >
+                                    <p> No hay productos en el carro</p>
                                 </div>
                             </Link>
-                            <p className="text-center" style={{ fontSize: '1.5rem'}}>Ups... tu carrito esta vacio</p>
+                            <p className="text-center" style={{ fontSize: '1.5rem'}}>Empty car!</p>
                         </div>
                     }
                 </div>
