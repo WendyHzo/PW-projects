@@ -1,18 +1,19 @@
 import React from "react";
-import ProductsTable from "../../components/productsTable";
-import Header from "../../componentes/Header";
+import ProductsTable from "../componentes/productsTable";
+import HeaderTest from "../componentes/headerTest";
 
-const ViewProducts = () => {
+
+const vistaProductos = () => {
   return (
     <>
-      <Header />
+      <HeaderTest  />
       <div className="row text-center pt-5 w-100">
-        <h1 style={{ fontSize: 35 }}>View products</h1>
-        <p style={{ fontSize: 20 }}>Esta sera una lista de los productos</p>
+        <h1 style={{ fontSize: 35 }}>Vista de productos</h1>
+        <p style={{ fontSize: 20 }}>Lista de productos:</p>
         <ProductsTable />
       </div>
     </>
   );
 };
 
-export default ViewProducts
+export default vistaProductos

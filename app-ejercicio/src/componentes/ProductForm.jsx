@@ -11,7 +11,7 @@ const ProductForm = ({ type }) => {
   const { addProduct, changePrice, changeProductName, precio, productName } = useContext(GlobalContext);
 
   const handleChange = (e) => {
-    if (e.target.nombre === "productName") {
+    if (e.target.name === "productName") {
         changeProductName(e.target.value)
     }
     if (e.target.name === "precio") {
@@ -21,7 +21,7 @@ const ProductForm = ({ type }) => {
 
   const handleClick = (e) => {
     addProduct({ name: productName, precio: precio });
-    changeProductName("Null")
+    changeProductName("Nombre")
     changePrice(0)
     toast.info('Ha producto al carrito!', {
       position: "top-center",
@@ -58,11 +58,12 @@ const ProductForm = ({ type }) => {
            />
           <span className="input-group-text">.00</span>
         </div>
-
       </div>
+      
       {type === "crear" && <Link to="vistaProductos">
         <button onClick={handleClick} className="btn btn-info mb-3"style={{ width: "100%" }} > Añadir producto </button>
-      </Link>}
+      </Link>
+      }
     </form>
   );
 };
